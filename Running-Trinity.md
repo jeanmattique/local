@@ -99,7 +99,7 @@ Usage info is as follows:
 
 
 
-Trinity performs best with strand-specific data, in which case sense and antisense transcripts can be resolved.  For protocols on strand-specific RNA-Seq, see: http://www.ncbi.nlm.nih.gov/pubmed/21943893[Borodina T, Adjaye J, Sultan M. A strand-specific library preparation protocol for RNA sequencing. Methods Enzymol. 2011;500:79-98. PubMed PMID: 21943893].
+Trinity performs best with strand-specific data, in which case sense and antisense transcripts can be resolved.  For protocols on strand-specific RNA-Seq, see: [Borodina T, Adjaye J, Sultan M. A strand-specific library preparation protocol for RNA sequencing. Methods Enzymol. 2011;500:79-98. PubMed PMID: 21943893](http://www.ncbi.nlm.nih.gov/pubmed/21943893).
 
 
 If you have strand-specific data, specify the library type.  There are four library types:
@@ -127,63 +127,61 @@ Other important considerations:
 - by setting the '--CPU option', you are indicating the maximum number of threads to be used by processes within Trinity. Note that Inchworm alone will be internally capped at 6 threads, since performance will not improve for this step beyond that setting)
 
 
-[[typical_usage]]
-== Typical Trinity Command Line == 
+<a name="typical_trinity_command_line"></a>
+## Typical Trinity Command Line
 
 A typical Trinity command for assembling non-strand-specific RNA-seq data would be like so, running the entire process on a single high-memory server (aim for ~1G RAM per ~1M ~76 base Illumina paired reads, but often *much* less memory is required):
 
 Run Trinity like so:
 
-   Trinity --seqType fq --max_memory 50G --left reads_1.fq.gz  --right reads_2.fq.gz --CPU 6
+     Trinity --seqType fq --max_memory 50G --left reads_1.fq.gz  --right reads_2.fq.gz --CPU 6
 
 If you have multiple sets of fastq files, such as corresponding to multiple tissue types or conditions, etc., you can indicate them to Trinity like so:
 
-   Trinity --seqType fq --max_memory 50G  --left condA_1.fq.gz,condB_1.fq.gz,condC_1.fq.gz --right condA_2.fq.gz,condB_2.fq.gz,condC_2.fq.gz --CPU 6  
+     Trinity --seqType fq --max_memory 50G  --left condA_1.fq.gz,condB_1.fq.gz,condC_1.fq.gz --right condA_2.fq.gz,condB_2.fq.gz,condC_2.fq.gz --CPU 6  
 
 Also note that fastq files can be gzip-compressed as shown above, in which case they should require a '.gz' extension.
 
-Example data and sample pipeline are provided and described <<sample_data, here>>.
+<a name="typical_options"></a>
+## Options to Consider when Running Trinity 
 
-[[typical_options]]
-== Options to Consider when Running Trinity ==
+Trinity includes additional options to automate various aspects of RNA-Seq read processing that should be considered prior to executing the de novo assembly. This includes quality trimming of reads using [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic), or in silico normalization of the total reads to reduce the number of reads that are subject to de novo assembly, improving on assembly run-time.  Also, if transcripts are derived from a compact genome where overlapping UTRs are common, options are provided to mitigate the assembly of falsely end-to-end fused transcripts by analyzing the consistency of the read pairings across the length of the transcripts. These options are each detailed below.
 
-Trinity includes additional options to automate various aspects of RNA-Seq read processing that should be considered prior to executing the de novo assembly. This includes quality trimming of reads (using http://www.usadellab.org/cms/?page=trimmomatic[Trimmomatic]), or in silico normalization of the total reads to reduce the number of reads that are subject to de novo assembly, improving on assembly run-time.  Also, if transcripts are derived from a compact genome where overlapping UTRs are common, options are provided to mitigate the assembly of falsely end-to-end fused transcripts by analyzing the consistency of the read pairings across the length of the transcripts. These options are each detailed below.
-
-[[trimmomatic]]
-=== Quality trimming using Trimmomatic ===
+<a name="trimmomatic"></a>
+#### Quality trimming using Trimmomatic
 To perform quality trimming of inputted fastq files, use 'Trinity --trimmomatic'.  The default settings for quality trimming are described under the full usage info for Trinity (use 'Trinity --show_full_usage_info' for complete usage info):
 
- ################################################################################
- #### Quality Trimming Options ####  
- # 
- #  --quality_trimming_params <string>   defaults to: "LEADING:5 TRAILING:5 MINLEN:36"
- #
- ################################################################################
+     ################################################################################
+     #### Quality Trimming Options ####  
+     # 
+     #  --quality_trimming_params <string>   defaults to: "LEADING:5 TRAILING:5 MINLEN:36"
+     #
+     ################################################################################
 
-The various options that are available for the Trimmomatic software are described on the http://www.usadellab.org/cms/?page=trimmomatic[Trimmomatic software website].  The Trimmomatic software is bundled as a trinity plugin for convenience.
+The various options that are available for the Trimmomatic software are described on the [Trimmomatic software website](http://www.usadellab.org/cms/?page=trimmomatic).  The Trimmomatic software is bundled as a trinity plugin for convenience.
 
 
-[[insilinorm]]
-== Assembling Large RNA-Seq Data Sets (hundreds of millions to billions of reads) ==
+<a name="insilinorm"></a>
+### Assembling Large RNA-Seq Data Sets (hundreds of millions to billions of reads)
 
 If you have especially large RNA-Seq data sets involving many hundreds of millions of reads to billions of reads, consider performing an in silico normalization of the full data set using 'Trinity --normalize_reads'.  The default normalization process should work well for most data sets. If you prefer to manually set normalization-related parameters, you can find the options under the full Trinity usage info:
 
- ################################################################################
- ####  In silico Read Normalization Options ###
- #
- #  --normalize_max_read_cov <int>       defaults to 50
- #  --normalize_by_read_set              run normalization separate for each pair of fastq files,
- #                                       then one final normalization that combines the individual normalized reads.
- #                                       Consider using this if RAM limitations are a consideration.
- #
- ################################################################################
+     ################################################################################
+     ####  In silico Read Normalization Options ###
+     #
+     #  --normalize_max_read_cov <int>       defaults to 50
+     #  --normalize_by_read_set              run normalization separate for each pair of fastq files,
+     #                                       then one final normalization that combines the individual normalized reads.
+     #                                       Consider using this if RAM limitations are a consideration.
+     #
+     ################################################################################
 
 
-If you are interested in running the normalization utility outside of Trinity, you can run it directly as described link:trinity_insilico_normalization.html[here].  
+If you are interested in running the normalization utility outside of Trinity, you can run it directly as described: [Trinity Insilico Normalization](Trinity Insilico Normalization).  
 
-[[jaccard_clip]]
-=== Minimizing Fusion Transcripts Derived from Gene Dense Genomes (using --jaccard_clip)  ===
+<a name="jaccard_clip"></a>
+### Minimizing Fusion Transcripts Derived from Gene Dense Genomes (using --jaccard_clip) 
 
-If your transcriptome RNA-seq data are derived from a gene-dense compact genome, such as from fungal genomes, where transcripts may often overlap in UTR regions, you can minimize fusion transcripts by leveraging the *--jaccard_clip* option if you have paired reads.  Trinity will examine the consistency of read pairings and fragment transcripts at positions that have little read-pairing support.  In expansive genomes of vertebrates and plants, this is unnecessary and not recommended.  In compact fungal genomes, it is highly recommended.  In addition to requiring paired reads, you must also have the http://bowtie-bio.sourceforge.net/index.shtml[Bowtie] short read aligner installed.  As part of this analysis, reads are aligned to the Inchworm contigs using Bowtie, and read pairings are examined across the Inchworm contigs, and contigs are clipped at positions of low pairing support.  These clipped Inchworm contigs are then fed into Chrysalis for downstream processing.  
+If your transcriptome RNA-seq data are derived from a gene-dense compact genome, such as from fungal genomes, where transcripts may often overlap in UTR regions, you can minimize fusion transcripts by leveraging the '--jaccard_clip' option if you have paired reads.  Trinity will examine the consistency of read pairings and fragment transcripts at positions that have little read-pairing support.  In expansive genomes of vertebrates and plants, this is unnecessary and not recommended.  In compact fungal genomes, it is highly recommended.  In addition to requiring paired reads, you must also have the [Bowtie](http://bowtie-bio.sourceforge.net/index.shtml) short read aligner installed.  As part of this analysis, reads are aligned to the Inchworm contigs using Bowtie, and read pairings are examined across the Inchworm contigs, and contigs are clipped at positions of low pairing support.  These clipped Inchworm contigs are then fed into Chrysalis for downstream processing.  
 
 Note, by using strand-specific RNA-Seq data alone, you should greatly mitigate the incorrect fusion of minimally overlapping transcripts.
