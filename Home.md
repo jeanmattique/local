@@ -63,22 +63,9 @@ The Trinity software package can be downloaded [here on GitHub](https://github.c
 
 
 
-[[sample_data]]
-== Running Trinity on Sample Data ==
-
-The Trinity software distribution includes sample data in the 'sample_data/test_Trinity_Assembly/' directory. Simply run the included 'runMe.sh' shell script to execute the Trinity assembly process with provided paired strand-specific Illumina data derived from mouse.  Running Trinity on the sample data requires <~2G of RAM and should run on an ordinary desktop/laptop computer.  Run as 'runMe.sh 1' to execute downstream analysis steps, including bowtie read alignment and RSEM-based abundance estimation, as described below.
 
 
-[[Downstream_analyses]]
-== Downstream Analyses ==
 
-The following downstream analyses are supported as part of Trinity:
-
-- link:analysis/abundance_estimation.html[Abundance estimation using RSEM or eXpress, and visualization using IGV].
-- link:analysis/diff_expression_analysis.html[Using EdgeR and Bioconductor for analyzing differentially expressed transcripts].
-- http://transdecoder.github.io[Extract likely protein-coding regions from Trinity transcripts using TransDecoder].
-- http://trinotate.github.io[Functionally annotate transcripts and coding regions with Trinotate].
-- link:analysis/full_length_transcript_analysis.html[Full-length transcript analysis for model and non-model transcriptomes]
 
 [[advanced_guide]]
 == Want to know more? ==
