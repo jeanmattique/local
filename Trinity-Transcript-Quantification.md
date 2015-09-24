@@ -88,4 +88,34 @@ The Trinity toolkit comes with a script to facilitate running your choice of the
     #########################################################################
 
 
+If you have strand-specific data, be sure to include the '--SS_lib_type' parameter.
+
+[NOTE]
+It is useful to first run 'align_and_estimate_abundance.pl' to only prep your reference database for alignment, using '--prep_reference', and then subsequently running it on each of your sets of reads in parallel to obtain sample-specific abundance estimates.
+
+[NOTE]
+If you quality-trimmed your reads using the --trimmomatic parameter in Trinity, you should consider using the corresponding quality-trimmed reads for the abundance estimation process outlined here.
+
+
+## Alignment-based methods
+The alignment step generates the file 'bowtie.bam', which is then fed directly into either RSEM or eXpress.  Note, if parameter '--coordsort_bam ' is set, the process also generates a 'bowtie.csorted.bam' file, which is a coordinate-sorted bam file that can be used for visualization using IGV.
+
+### RSEM output
+The RSEM computation generates two primary output files containing the abundance estimation information:
+
+  RSEM.isoforms.results  : EM read counts per Trinity transcript
+  RSEM.genes.results     : EM read counts on a per-Trinity-gene, 'gene' used loosely here.
+
+
+The output for the isoforms file looks like so:
+
+|transcript_id|   gene_id| length|  effective_length|        expected_count|  TPM|     FPKM|    IsoPct|
+|-------------:|---------:|-----:|-----------------:|---------------------:|-----:|--------:|--------:|
+|TRINITY_DN100_c0_g1_i1|  TRINITY_DN100_c0_g1|     443|     181.37|  4.84|    1670.06| 12311.85|        100.00|
+|TRINITY_DN101_c0_g1_i1|  TRINITY_DN101_c0_g1|     251|     19.37|   1.00|    3231.22| 23820.87|        100.00|
+|TRINITY_DN103_c0_g1_i1|  TRINITY_DN103_c0_g1|     1219|    957.37|  0.00|    0.00|    0.00|    100.00|
+|TRINITY_DN103_c0_g2_i1|  TRINITY_DN103_c0_g2|     414|     152.41|  0.00|    0.00|    0.00|    100.00|
+|TRINITY_DN104_c0_g1_i1|  TRINITY_DN104_c0_g1|     408|     146.44|  0.00|    0.00|    0.00|    0.00|
+|TRINITY_DN106_c0_g1_i1|  TRINITY_DN106_c0_g1|     1111|    849.37|  1.00|    73.70|   543.30|  100.00|
+|TRINITY_DN106_c1_g1_i1|  TRINITY_DN106_c1_g1|     339|     81.68|   0.00|    0.00|    0.00|    0.00|
 
