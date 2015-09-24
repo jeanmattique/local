@@ -1,3 +1,5 @@
 * [Trinity Wiki Home](Home)
 * [Installing Trinity](Installing Trinity)
 * [Accessing Trinity on Publicly Available Compute Resources](Accessing Trinity on Publicly Available Compute Resources)
+* [Running Trinity](Running Trinity)
+* [Genome Guided Trinity Transcriptome Assembly](Genome-Guided-Trinity-Transcriptome-Assembly)
