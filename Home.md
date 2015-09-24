@@ -39,13 +39,7 @@ The Trinity software package can be downloaded [here on GitHub](https://github.c
 
 == Table of Contents ==
 
-* <<installation, Installing Trinity>>
-* <<running_trinity, Running Trinity>>
-** <<typical_usage, Typical Trinity Command Line>>
-** <<typical_options, Options to consider when running Trinity>>
-*** <<trimmomatic, Quality trimming using Trimmomatic>>
-*** <<insilinorm, In silico Normalization of Reads (for assembly of (hundreds of millions to billions of reads)>>
-*** <<jaccard_clip, Minimizing falsely fused transcripts from gene-dense genomes>>
+
 *** <<genome_guided, Genome-guided Trinity>>
 *** <<genome_annotation, Comprehensive transcriptome-based genome annotation using Trinity and PASA>>
 ** <<trinity_output, Output of Trinity>>
@@ -69,22 +63,7 @@ The Trinity software package can be downloaded [here on GitHub](https://github.c
 
 
 
-[[genome_guided]]
-=== Genome-guided Trinity  ===
 
-If a genome sequence is available, Trinity offers a method whereby reads are first aligned to the genome, partitioned according to locus, followed by de novo transcriptome assembly at each locus.
-
-Users must provide read alignments to Trinity as a coordinate-sorted bam file.  Use http://research-pub.gene.com/gmap/[gsnap], http://ccb.jhu.edu/software/tophat/index.shtml[tophat], https://github.com/alexdobin/STAR[STAR] or other favorite RNA-Seq read alignment tool to generate the bam file, and be sure it's coordinate sorted by running 'samtools sort' on it.
-
-To run Genome-guided Trinity and have Trinity execute GSNAP to align the reads, run Trinity like so:
-
-  Trinity --genome_guided_bam rnaseq.coordSorted.bam --genome_guided_max_intron 10000 --max_memory 10G --CPU 10 
-
-Of course, use a maximum intron length that makes most sense given your targeted organism.
-
-Be sure to include additional options such as '--SS_lib_type' and '--jaccard_clip' where appropriate.  If quality trimming or normalization are indicated, these processes will be performed prior to aligning the reads to the genome.
-
-If you specify --grid_conf <string>, then the commands in this second phase will be executed in parallel on your compute farm, using LSF, SGE, or other supported method.  Otherwise, these commands will be executed locally using our Parafly parallel command processor, throttled at --CPU number of parallel processes.
 
 [[genome_annotation]]
 === Comprehensive transcriptome-based genome annotation using Trinity and PASA ===
