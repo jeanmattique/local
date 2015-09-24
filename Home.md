@@ -35,75 +35,21 @@ The Trinity software package can be downloaded [here on GitHub](https://github.c
 [Screenast videos](http://www.broadinstitute.org/partnerships/education/broade/trinity-screencast) are available to introduce you to Trinity and its various components. Also, hands-on tutorials for Trinity and Tuxedo are available as part of our link:workshop/rnaseq_workshop.html[RNA-Seq Workshop].
 
 
-
-
-== Table of Contents ==
-
-
-*** <<genome_guided, Genome-guided Trinity>>
-*** <<genome_annotation, Comprehensive transcriptome-based genome annotation using Trinity and PASA>>
-** <<trinity_output, Output of Trinity>>
-** <<compute_requirements, Hardware and Configuration Requirements>>
-** <<monitoring_trinity, Monitoring the Progress of Trinity>>
-** <<sample_data, Running Trinity on Sample Data>>
-* <<Downstream_analyses, Post-assembly Transcriptome Analysis>>
-** link:analysis/abundance_estimation.html[Abundance Estimation using RSEM or eXpress, and Visualization using IGV]
-** link:analysis/diff_expression_analysis.html[Differential Expression Analysis using Bioconductor]
-** http://transdecoder.github.io[Protein-coding Region Identification Using TransDecoder]
-** http://trinotate.github.io[Functional Annotation Using Trinotate]
-** link:analysis/run_GOseq.html[Gene Ontology functional category enrichment using GOseq and Trinotate]
-** link:analysis/full_length_transcript_analysis.html[Full-length Transcript Analysis]
-* link:advanced_trinity_guide.html[Advanced Guide to Trinity]
-* link:trinity_faq.html[Frequently Asked Questions]
-* <<trinity_tidbits, Trinity Tidbits>>
-* <<contact_us, Contact Us>>
-* <<referencing_trinity, Referencing Trinity>>
-
-
-
-
-
-
-
-
-
-[[advanced_guide]]
-== Want to know more? ==
-
-Visit the link:advanced_trinity_guide.html[Advanced Guide to Trinity] for more information regarding Trinity behavior, intermediate data files, and file formats.
-
-[[faq]]
-== Frequently Asked Questions ==
-
-Visit the link:trinity_faq.html[Trinity FAQ] page.
-
-[[trinity_tidbits]]
-== Trinity Tidbits ==
-
-- Trinity made the cover of the http://www.nature.com/nbt/journal/v29/n7/index.html[July 2011 NBT issue]. The Broad Institute's http://www.broadinstitute.org/blog/suite-tools-takes-flight[blog] has a story on how the Trinity project came together. Nir Friedman, one of the project PIs, has a http://nirfriedmanlab.blogspot.com/2011/07/behind-cover.html[blog entry] describing the developmental process underlying the NBT cover design.
-
-- Trinity was shown to be the leading de novo transcriptome assembly tool as part of the http://www.the-dream-project.org/challanges/dream6-alternative-splicing-challenge[DREAM6 Alt-Splicing Challenge 2011]. Results were posted http://www.the-dream-project.org/result/alternative-splicing[here].  
-
-- http://scholar.google.com/scholar?oi=bibs&hl=en&cites=14735674943942667509[Google Scholar] shows how Trinity is being used by the community.
-
-[[contact_us]]
-== Contact Us ==
+##Contact Us
 
 Questions, suggestions, comments, etc?
 
-Join and add discussions at the Trinityrnaseq-users Google group: https://groups.google.com/forum/\#!forum/trinityrnaseq-users[https://groups.google.com/forum/#!forum/trinityrnaseq-users].
+Join and add discussions at the Trinityrnaseq-users Google group: <https://groups.google.com/forum/#!forum/trinityrnaseq-users>.
 
-
-[[referencing_trinity]]
-== Referencing Trinity ==
+##Referencing Trinity
 
 Trinity can be referenced as:
 
 - Grabherr MG, Haas BJ, Yassour M, Levin JZ, Thompson DA, Amit I, Adiconis X, Fan L, Raychowdhury R, Zeng Q, Chen Z, Mauceli E, Hacohen N, Gnirke A, Rhind N,
 di Palma F, Birren BW, Nusbaum C, Lindblad-Toh K, Friedman N, Regev A.
 Full-length transcriptome assembly from RNA-seq data without a reference genome. 
-http://www.nature.com/nbt/journal/vaop/ncurrent/abs/nbt.1883.html[Nat Biotechnol. 2011 May 15;29(7):644-52]. doi: 10.1038/nbt.1883. 
-http://www.ncbi.nlm.nih.gov/pubmed/21572440[PubMed PMID: 21572440].
+[Nat Biotechnol. 2011 May 15;29(7):644-52](http://www.nature.com/nbt/journal/vaop/ncurrent/abs/nbt.1883.html). doi: 10.1038/nbt.1883. 
+[PubMed PMID: 21572440](http://www.ncbi.nlm.nih.gov/pubmed/21572440).
 
 Protocol for using Trinity for de novo transcriptome assembly and downstream analyses:
 
@@ -111,12 +57,12 @@ Protocol for using Trinity for de novo transcriptome assembly and downstream ana
 Eccles D, Li B, Lieber M, Macmanes MD, Ott M, Orvis J, Pochet N, Strozzi F, Weeks
 N, Westerman R, William T, Dewey CN, Henschel R, Leduc RD, Friedman N, Regev A.
 De novo transcript sequence reconstruction from RNA-seq using the Trinity
-platform for reference generation and analysis. http://www.nature.com/nprot/journal/v8/n8/full/nprot.2013.084.html[Nat Protoc. 2013 Aug;8(8):1494-512.] http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3875132/[Open Access in PMC] doi: 10.1038/nprot.2013.084. Epub 2013 Jul 11. PubMed PMID:
+platform for reference generation and analysis. [Nat Protoc. 2013 Aug;8(8):1494-512.](http://www.nature.com/nprot/journal/v8/n8/full/nprot.2013.084.html). [Open Access in PMC](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3875132/ doi: 10.1038/nprot.2013.084). Epub 2013 Jul 11. PubMed PMID:
 23845962.
 
 
 Performance tuning of Trinity is described in:
 
-- Henschel R, Lieber M, Wu L, Nista, PM, Haas BJ, LeDuc R.  Trinity RNA-Seq assembler performance optimization. XSEDE 2012 Proceedings of the 1st Conference of the Extreme Science and Engineering Discovery Environment: Bridging from the eXtreme to the campus and beyond. http://dx.doi.org/10.1145/2335755.2335842[ISBN: 978-1-4503-1602-6 doi>10.1145/2335755.2335842].
+- Henschel R, Lieber M, Wu L, Nista, PM, Haas BJ, LeDuc R.  Trinity RNA-Seq assembler performance optimization. XSEDE 2012 Proceedings of the 1st Conference of the Extreme Science and Engineering Discovery Environment: Bridging from the eXtreme to the campus and beyond. [ISBN: 978-1-4503-1602-6 doi>10.1145/2335755.2335842](http://dx.doi.org/10.1145/2335755.2335842).
 
 A full list of references including Trinity, RSEM, and additional tools leveraged by Trinity can be obtained by running 'Trinity --cite'.
