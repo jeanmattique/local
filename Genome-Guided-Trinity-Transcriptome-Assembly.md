@@ -6,7 +6,9 @@ Users must provide read alignments to Trinity as a coordinate-sorted bam file.  
 
 To run Genome-guided Trinity and have Trinity execute GSNAP to align the reads, run Trinity like so:
 
-     Trinity --genome_guided_bam rnaseq.coordSorted.bam --genome_guided_max_intron 10000 --max_memory 10G --CPU 10 
+     Trinity --genome_guided_bam rnaseq.coordSorted.bam \
+             --genome_guided_max_intron 10000 \
+             --max_memory 10G --CPU 10 
 
 Of course, use a maximum intron length that makes most sense given your targeted organism.
 
