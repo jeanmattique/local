@@ -145,11 +145,14 @@ The kallisto runner similarly generates two files:
 
 The format of the output is short and sweet, providing the key essential metrics:
 
-|target_id       length  eff_length      est_counts      tpm
-TRINITY_DN10_c0_g1_i1   334     100.489 13      4186.62
-TRINITY_DN11_c0_g1_i1   319     87.9968 0       0
-TRINITY_DN12_c0_g1_i1   244     38.2208 2       1693.43
-TRINITY_DN17_c0_g1_i1   229     30.2382 5       5351.21
-TRINITY_DN18_c0_g1_i1   633     384.493 19      1599.2
-TRINITY_DN18_c1_g1_i1   289     65.795  1       491.864
-TRINITY_DN19_c0_g1_i1   283     61.0618 10      5299.91
+|target_id|       length|  eff_length|      est_counts|      tpm|
+|:---------|-----------:|-----------:|---------------:|--------:|
+|TRINITY_DN10_c0_g1_i1|   334|     100.489| 13|      4186.62|
+|TRINITY_DN11_c0_g1_i1|   319|     87.9968| 0|       0|
+|TRINITY_DN12_c0_g1_i1|   244|     38.2208| 2|       1693.43|
+|TRINITY_DN17_c0_g1_i1|   229|     30.2382| 5|       5351.21|
+|TRINITY_DN18_c0_g1_i1|   633|     384.493| 19|      1599.2|
+|TRINITY_DN18_c1_g1_i1|   289|     65.795|  1|       491.864|
+|TRINITY_DN19_c0_g1_i1|   283|     61.0618| 10|      5299.91|
+
+
