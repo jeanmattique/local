@@ -2,11 +2,11 @@
 
 ![TrinityCompositeLogo](images/TrinityCompositeLogo.png)
 
-== Quick Guide for the Impatient ==
+## Quick Guide for the Impatient
 
 Trinity assembles transcript sequences from Illumina RNA-Seq data.
 
-Download Trinity https://github.com/trinityrnaseq/trinityrnaseq/releases[here].
+Download Trinity [here](https://github.com/trinityrnaseq/trinityrnaseq/releases).
 
 Build Trinity by typing 'make' in the base installation directory.
 
