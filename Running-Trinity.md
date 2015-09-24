@@ -114,7 +114,7 @@ If you have strand-specific data, specify the library type.  There are four libr
 
 By setting the *--SS_lib_type* parameter to one of the above, you are indicating that the reads are strand-specific.  By default, reads are treated as not strand-specific.
 
-image:http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3875132/bin/nihms-537313-f0006.jpg[strand-specific library type]
+![strand specific specification](https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/strand_specificity.jpg)
 
 Other important considerations:
 
