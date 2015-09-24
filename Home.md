@@ -65,10 +65,7 @@ The Trinity software package can be downloaded [here on GitHub](https://github.c
 
 
 
-[[genome_annotation]]
-=== Comprehensive transcriptome-based genome annotation using Trinity and PASA ===
 
-The Trinity-reconstructed transcripts can be used to annotate genomes using PASA.  Documentation for this is provided on the PASA website under http://pasapipeline.github.io/#A_ComprehensiveTranscriptome[Build a Comprehensive Transcriptome Database Using Genome-guided and De novo RNA-Seq Assembly] link.
 
 [[trinity_output]]
 == Output of Trinity ==
