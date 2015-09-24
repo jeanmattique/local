@@ -65,13 +65,13 @@ It is sometimes the case that a single transcript will align to a single protein
 
        Group the multiple HSPs per transcript/database_match pairing like so:
 
-        % $TRINITY_HOME/trinityrnaseq/util/misc/blast_outfmt6_group_segments.pl \
+        % $TRINITY_HOME/util/misc/blast_outfmt6_group_segments.pl \
           blast.outfmt6  Trinity.fasta  uniprot_sprot.fasta > blast.outfmt6.grouped
 
 
        Then compute the percent coverage by length histogram like so.
 
-        % util/misc/blast_outfmt6_group_segments.tophit_coverage.pl blast.outfmt6.grouped
+        % $TRINITY_HOME/util/misc/blast_outfmt6_group_segments.tophit_coverage.pl blast.outfmt6.grouped
 
 The resulting table has an identical format to as described above, but is now based on grouped HSPs per transcript/database_match pair as opposed to a single HSP per pairing.
 
