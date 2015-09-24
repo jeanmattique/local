@@ -20,8 +20,7 @@ To examine the extent of top-matching BLAST alignments, first run BLAST, and the
 
 
 
-[NOTE]
-Type 'blastx -help' for a description of the tab-delimited output format.
+>Type 'blastx -help' for a description of the tab-delimited output format.
 
 Next, examine the percent of the target being aligned to by the best matching Trinity transcript, like so:
 
