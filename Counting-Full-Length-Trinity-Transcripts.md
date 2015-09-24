@@ -58,3 +58,20 @@ Statements we can make based on this table include:
 
 >Similar analyses can be performed using nucleotide databases, running blastn instead of blastx.  
 
+
+## Grouping Blast Hits to Improve Sequence Coverage
+
+It is sometimes the case that a single transcript will align to a single protein sequence with several discontinuous alignments (a BLAST hit containing multiple high scoring segment pairs (HSPs)).  The approach above will only consider the single best alignment.  However, via an extended process below, you can first group those multiple HSPs per transcript and database hit, and compute the alignment coverage based on the grouped HSPs.  This extended process begins by using the same BLAST output file: 'blastx.outfmt6'.
+
+       Group the multiple HSPs per transcript/database_match pairing like so:
+
+        % $TRINITY_HOME/trinityrnaseq/util/misc/blast_outfmt6_group_segments.pl \
+          blast.outfmt6  Trinity.fasta  uniprot_sprot.fasta > blast.outfmt6.grouped
+
+
+       Then compute the percent coverage by length histogram like so.
+
+        % util/misc/blast_outfmt6_group_segments.tophit_coverage.pl blast.outfmt6.grouped
+
+The resulting table has an identical format to as described above, but is now based on grouped HSPs per transcript/database_match pair as opposed to a single HSP per pairing.
+
