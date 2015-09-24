@@ -16,6 +16,8 @@ Assemble RNA-Seq data like so:
 
 Find assembled transcripts as:  'trinity_out_dir/Trinity.fasta'
 
+Use the documentation links in the right-sidebar to navigate this documentation, and contact our [Google group for technical support](contact_us).
+
 ##Intro to Trinity
 
 Trinity, developed at the [Broad Institute](http://www.broadinstitute.org) and the [Hebrew University of Jerusalem] (http://www.cs.huji.ac.il), represents a novel method for the efficient and robust de novo reconstruction of transcriptomes from RNA-seq data. Trinity combines three independent software modules: Inchworm, Chrysalis, and Butterfly, applied sequentially to process large volumes of RNA-seq reads. Trinity partitions the sequence data into many individual de Bruijn graphs, each representing the transcriptional complexity at at a given gene or locus, and then processes each graph independently to extract full-length splicing isoforms and to tease apart transcripts derived from paralogous genes.  Briefly, the process works like so:
@@ -34,7 +36,7 @@ The Trinity software package can be downloaded [here on GitHub](https://github.c
 
 [Screenast videos](http://www.broadinstitute.org/partnerships/education/broade/trinity-screencast) are available to introduce you to Trinity and its various components. Also, hands-on tutorials for Trinity and Tuxedo are available as part of our link:workshop/rnaseq_workshop.html[RNA-Seq Workshop].
 
-
+<a name='contact_us'></a>
 ##Contact Us
 
 Questions, suggestions, comments, etc?
