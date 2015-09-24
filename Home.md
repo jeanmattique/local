@@ -16,7 +16,7 @@ Assemble RNA-Seq data like so:
 
 Find assembled transcripts as:  'trinity_out_dir/Trinity.fasta'
 
-Use the documentation links in the right-sidebar to navigate this documentation, and contact our [Google group for technical support](contact_us).
+Use the documentation links in the right-sidebar to navigate this documentation, and contact our [Google group for technical support](#contact_us).
 
 ##Intro to Trinity
 
