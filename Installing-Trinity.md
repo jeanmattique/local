@@ -1,6 +1,6 @@
 # Installing Trinity
 
-After https://github.com/trinityrnaseq/trinityrnaseq/releases[downloading] the software to a Linux server, simply type 
+After [downloading](https://github.com/trinityrnaseq/trinityrnaseq/releases) the software to a Linux server, simply type 
    
     make 
 
@@ -18,15 +18,19 @@ If you encounter any errors in building the RSEM software, simply
     make
 
 and assuming that succeeds, you can then cd back to the main Trinity installation directory and retype 'make plugins' to continue the remaining build.
-==================
 
 Additional tools required for running Trinity include:
 
-- http://bowtie-bio.sourceforge.net/index.shtml[bowtie-1]
+- [bowtie-1](http://bowtie-bio.sourceforge.net/index.shtml)
 
 Trinity has been tested and is supported on Linux.
 
 
+To test your installation of Trinity, try assembling the small sample data set provided with Trinity like so:
+
+    cd sample_data/test_Trinity_Assembly/
+    
+    ./runMe.sh
 
 ## [OPTIONAL] Adapting Trinity to a computing grid for parallel processing of naively parallel steps
 
