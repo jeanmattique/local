@@ -4,8 +4,10 @@ Assembled transcripts might not always fully represent properly paired-end reads
 
 In order to comprehensively capture read alignments, we run the process below.  Bowtie is used to align each fragment end to the transcriptome assembly separately. Subsequently, the read pairs are grouped into properly paired reads where possible, and those reads that do not map as properly paired are still retained.  
 
-      $TRINITY_HOME/util/bowtie_PE_separate_then_join.pl --seqType fq --left left.fq --right right.fq \
-                  --target Trinity.fasta --aligner bowtie -- -p 4 --all --best --strata -m 300
+      $TRINITY_HOME/util/bowtie_PE_separate_then_join.pl --seqType fq \
+                  --left left.fq --right right.fq \
+                  --target Trinity.fasta --aligner bowtie \
+                  -- -p 4 --all --best --strata -m 300  # following -- are params that get tacked onto the bowtie command.
 
 
 As usual, if you have strand-specific RNA-Seq data, indicate this with the '--SS_lib_type' parameter, and put this parameter before the '--' above, since all the parameters after '--' are applied to the bowtie aligner.
