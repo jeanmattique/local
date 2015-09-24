@@ -2,7 +2,7 @@
 
 After https://github.com/trinityrnaseq/trinityrnaseq/releases[downloading] the software to a Linux server, simply type 
    
-   make 
+    make 
 
 in the base installation directory.  This should build Inchworm and Chrysalis, both written in C++.  Butterfly should not require any special compilation, as its written in Java and already provided as portable precompiled software, but *Java-1.7* (or higher) is required.
 
