@@ -1,8 +1,8 @@
-# RNA-Seq De novo Assembly Using Trinity
+#RNA-Seq De novo Assembly Using Trinity
 
 ![TrinityCompositeLogo](https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/TrinityCompositeLogo.png)
 
-## Quick Guide for the Impatient
+##Quick Guide for the Impatient
 
 Trinity assembles transcript sequences from Illumina RNA-Seq data.
 
@@ -16,10 +16,9 @@ Assemble RNA-Seq data like so:
 
 Find assembled transcripts as:  'trinity_out_dir/Trinity.fasta'
 
+##Intro to Trinity
 
-== Intro to Trinity ==
-
-Trinity, developed at the http://www.broadinstitute.org[Broad Institute] and the http://www.cs.huji.ac.il[Hebrew University of Jerusalem], represents a novel method for the efficient and robust de novo reconstruction of transcriptomes from RNA-seq data. Trinity combines three independent software modules: Inchworm, Chrysalis, and Butterfly, applied sequentially to process large volumes of RNA-seq reads. Trinity partitions the sequence data into many individual de Bruijn graphs, each representing the transcriptional complexity at at a given gene or locus, and then processes each graph independently to extract full-length splicing isoforms and to tease apart transcripts derived from paralogous genes.  Briefly, the process works like so:
+Trinity, developed at the [Broad Institute]http://www.broadinstitute.org and the [Hebrew University of Jerusalem] http://www.cs.huji.ac.il, represents a novel method for the efficient and robust de novo reconstruction of transcriptomes from RNA-seq data. Trinity combines three independent software modules: Inchworm, Chrysalis, and Butterfly, applied sequentially to process large volumes of RNA-seq reads. Trinity partitions the sequence data into many individual de Bruijn graphs, each representing the transcriptional complexity at at a given gene or locus, and then processes each graph independently to extract full-length splicing isoforms and to tease apart transcripts derived from paralogous genes.  Briefly, the process works like so:
 
 - *Inchworm* assembles the RNA-seq data into the unique sequences of transcripts, often generating full-length transcripts for a dominant isoform, but then reports just the unique portions of alternatively spliced transcripts.
 
@@ -27,13 +26,13 @@ Trinity, developed at the http://www.broadinstitute.org[Broad Institute] and the
 
 - *Butterfly* then processes the individual graphs in parallel, tracing the paths that reads and pairs of reads take within the graph, ultimately reporting full-length transcripts for alternatively spliced isoforms, and teasing apart transcripts that corresponds to paralogous genes.
 
-Trinity was published in http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3571712/[Nature Biotechnology].  Our protocol for transcriptome assembly and downstream analysis is now published in http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3875132/[Nature Protocols]
+Trinity was published in [Nature Biotechnology]http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3571712/.  Our protocol for transcriptome assembly and downstream analysis is published in [Nature Protocols] http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3875132/, although we always have the most current instructional material available here at the Trinity website.
 
-The Trinity software package can be downloaded https://github.com/trinityrnaseq/trinityrnaseq/releases[here on GitHub]. Legacy versions (pre-2015) are still available at http://sourceforge.net/projects/trinityrnaseq/files/PREV_CONTENTS/previous_releases/[Sourceforge].
+The Trinity software package can be downloaded [here on GitHub]https://github.com/trinityrnaseq/trinityrnaseq/releases. Legacy versions (pre-2015) are still available at [Sourceforge]http://sourceforge.net/projects/trinityrnaseq/files/PREV_CONTENTS/previous_releases/.
 
-http://trinityrnaseq.github.io/performance/[Runtime and transcript reconstruction performance stats] are available for current and previous releases.
+[Runtime and transcript reconstruction performance stats]http://trinityrnaseq.github.io/performance/ are available for current and previous releases.
 
-http://www.broadinstitute.org/partnerships/education/broade/trinity-screencast[Screencast videos] are available to introduce you to Trinity and its various components. Also, hands-on tutorials for Trinity and Tuxedo are available as part of our link:workshop/rnaseq_workshop.html[RNA-Seq Workshop].
+[Screenast videos]http://www.broadinstitute.org/partnerships/education/broade/trinity-screencast are available to introduce you to Trinity and its various components. Also, hands-on tutorials for Trinity and Tuxedo are available as part of our link:workshop/rnaseq_workshop.html[RNA-Seq Workshop].
 
 
 
