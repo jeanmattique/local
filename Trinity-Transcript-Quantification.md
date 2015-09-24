@@ -6,6 +6,8 @@ In Trinity, we provide direct support for running the alignment-based quantifica
 
 The Trinity software does not come pre-packaged with any of these software tools, so be sure to download and install any that you wish to use. The tools should be available via your PATH setting (so, typing 'which kallisto' or 'which express' on the linux command line returns the path to where the tool is installed on your system).
 
+>If you have multiple RNA-Seq data sets that you want to compare (eg. different tissues sampled from a single organims), be sure to **generate a single Trinity assembly** and to then run the abundance estimation separately for each of your samples.
+
 ## Estimating Transcript Abundance
 
 The Trinity toolkit comes with a script to facilitate running your choice of the above tools to quantitate transcript abundance:
