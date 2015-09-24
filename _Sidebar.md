@@ -5,5 +5,5 @@
 * [Running Trinity](Running Trinity)
     * [Genome Guided Trinity Transcriptome Assembly](Genome-Guided-Trinity-Transcriptome-Assembly)
     * [Genome Annotation](Genome-Annotation-Using-Trinity--and-PASA)
-* [Monitoring Progress of Trinity Run](Trinity-Progress-Monitoring)
+* [Monitoring Progress of a Trinity Run](Trinity-Progress-Monitoring)
 * [Output of Trinity Assembly](Output-of-Trinity-Assembly)
