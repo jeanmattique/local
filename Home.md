@@ -12,7 +12,7 @@ Build Trinity by typing 'make' in the base installation directory.
 
 Assemble RNA-Seq data like so:
 
-   Trinity --seqType fq --left reads_1.fq --right reads_2.fq --CPU 6 --max_memory 20G 
+     Trinity --seqType fq --left reads_1.fq --right reads_2.fq --CPU 6 --max_memory 20G 
 
 Find assembled transcripts as:  'trinity_out_dir/Trinity.fasta'
 
@@ -66,20 +66,6 @@ The Trinity software package can be downloaded [here on GitHub](https://github.c
 * <<referencing_trinity, Referencing Trinity>>
 
 
-[[installation]]
-== Installing Trinity ==
-
-=== Local Installation of Trinity on a High-memory Linux Server ===
-
-
-[[RunElsewhere]]
-=== Using a Freely Available Trinity Installation on High Performance Computing Systems ===
-
-- Use the Trinity NCGAS Galaxy portal at https://galaxy.ncgas-trinity.indiana.edu/[https://galaxy.ncgas-trinity.indiana.edu/].
-
-- Trinity is available on XSEDE's Blacklight server at the http://www.psc.edu/[Pittsburgh Supercomputer Center].  Information on how researchers in the USA can get a FREE account and to run Trinity on Blacklight (which has up to 16TB of RAM!) is provided http://trinity-use-on-blacklight-psc.wikispaces.com/Trinity+Usage+on+Blacklight[here]. Thanks to Phil Blood and Brian Cougar for maintaining this installation and making services available.
-
-- http://diagcomputing.org/[The Data Intensive Acadmeic Grid (DIAG)] provides *FREE ACCESS TO ALL RESEARCHERS* high memory servers and data storage for academic research. Trinity is supported as one of the pre-installed applications. The guide for running Trinity on DIAG is http://wiki.diagcomputing.org/index.php/Trinity[here]. Thanks to Anup Mahurkar and Joshua Orvis for support.
 
 
 [[running_trinity]]
