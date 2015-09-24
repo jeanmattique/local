@@ -1,6 +1,6 @@
 # RNA-Seq De novo Assembly Using Trinity
 
-![TrinityCompositeLogo](images/TrinityCompositeLogo.png)
+![TrinityCompositeLogo](TrinityCompositeLogo.png)
 
 ## Quick Guide for the Impatient
 
