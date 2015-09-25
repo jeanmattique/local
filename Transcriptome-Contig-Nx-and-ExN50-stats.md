@@ -1,6 +1,6 @@
 # Trinity Transcriptome Contig Nx and ExNy Statistics
 
-
+Below we describe Trinity toolkit utilities for computing contig Nx statistics (eg. the contig N50 value), in addition to a modification of the Nx statistic that takes into consideration transcript expression (read support) data, which we call the ExN50 statistic.
 
 ## The Transcriptome Contig Nx Statistic
 
