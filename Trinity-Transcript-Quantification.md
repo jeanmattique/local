@@ -239,3 +239,7 @@ and, looking at the output for gene counts as a function of minimum TPM value we
 |0|	1388798|
 
 
+The above table indicates that we have 847,297 'genes' that are expressed by at least 1 TPM in any one of the many samples in this expression matrix.  No, there are probably not so many of what we would call biologically relevant 'genes' in this data set, but instead, due to the sensitivity of RNA-Seq and our de novo transcriptome assembly, we were able to reconstruct contigs that represent that many features with evidence of being expressed at that minimum threshold.  If we increase our stringency to a minimum of 5 TPM, we report only 58,324 'genes', which many would consider a more reasonable estimate - even if still a probable exaggeration.  
+
+Plotting the number of 'genes' (or 'transcripts') as a function of minimum TPM threshold, we can see that the vast majority of all expressed features have very little expression support.  Using R (or your own favorite data analysis package), we might extrapolate the number of expressed 'genes' based on 
+
