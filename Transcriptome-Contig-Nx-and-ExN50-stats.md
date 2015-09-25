@@ -93,3 +93,8 @@ which will generate a data table like so:
 |E99|	0.128|	1512|	668589|
 |E100|	0|	606|	1554055|
 
+Plotting the Ex value (first column) against the ExN50 value, we see:
+
+<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/ExN50_plot.png" width=400 />
+
+Note that our original contig N50 value is 606 bases, and involves all the contigs (E100), but in excluding the many lowly expressed contigs (which tend to also be very short given that low read coverage confounds assembly), most N50 calculations would be substantially greater, ranging from ~2.4 kb to ~3.5 kb.  The maximum value is found near E90 in this data set.  Instead of reporting N50 values that discard read coverage information, we assert the E90N50 value as a more useful indicator of transcriptome assembly quality. 
