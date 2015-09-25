@@ -102,7 +102,8 @@ Differentially expressed transcripts or genes are identified by running the scri
 
 It's very important to have biological replicates to power DE detection and reduce false positive predictions. If you do not have biological replicates, edgeR will allow you to perform DE analysis if you manually set the --dispersion parameter. Values for the dispersion parameter must be chosen carefully, and you might begin by exploring values between 0.1 and 0.4. Please visit the [edgeR manual](http://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf) for further guidance on this matter.
 
-  $TRINITY_HOME/Analysis/DifferentialExpression/run_DE_analysis.pl --matrix counts.matrix --method edgeR --dispersion 0.1
+      $TRINITY_HOME/Analysis/DifferentialExpression/run_DE_analysis.pl \
+          --matrix counts.matrix --method edgeR --dispersion 0.1
 
 
 ### Identifying DE features: With biological replicates (PREFERRED)
@@ -124,7 +125,8 @@ where condA-rep1, condA-rep2, condB-rep1, etc..., are all column names in the 'c
 
 Any of the available methods support analyses containing biological replicates.  Here, for example, we again choose voom within the limma package.
 
-  $TRINITY_HOME/Analysis/DifferentialExpression/run_DE_analysis.pl --matrix counts.matrix --method voom --samples_file samples_described.txt 
+      $TRINITY_HOME/Analysis/DifferentialExpression/run_DE_analysis.pl \
+       --matrix counts.matrix --method voom --samples_file samples_described.txt 
     
 
 >A full example of the edgeR pipeline involving combining reads from multiple samples, assembling them using Trinity, separately aligning reads back to the trintiy assemblies, abundance estimation using RSEM, and differential expression analysis using edgeR is provided at: $TRINITY_HOME/sample_data/test_full_edgeR_pipeline
