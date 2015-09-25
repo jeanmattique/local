@@ -92,11 +92,9 @@ The Trinity toolkit comes with a script to facilitate running your choice of the
 
 If you have strand-specific data, be sure to include the '--SS_lib_type' parameter.
 
-[NOTE]
-It is useful to first run 'align_and_estimate_abundance.pl' to only prep your reference database for alignment, using '--prep_reference', and then subsequently running it on each of your sets of reads in parallel to obtain sample-specific abundance estimates.
+>It is useful to first run 'align_and_estimate_abundance.pl' to only prep your reference database for alignment, using '--prep_reference', and then subsequently running it on each of your sets of reads in parallel to obtain sample-specific abundance estimates.
 
-[NOTE]
-If you quality-trimmed your reads using the --trimmomatic parameter in Trinity, you should consider using the corresponding quality-trimmed reads for the abundance estimation process outlined here.
+>If you quality-trimmed your reads using the --trimmomatic parameter in Trinity, you should consider using the corresponding quality-trimmed reads for the abundance estimation process outlined here.
 
 
 Any of the abundance estimation methods will provide transcript-level estimates of the count of RNA-Seq fragments that were derived from each transcript, in addition to a normalized measure of transcript expression that takes into account the transcript length, the number of reads mapped to the transcript, and the the total number of reads that mapped to any transcript. Normalized expression metrics may be reported as 'fragments per kilobase transcript length per million fragments mapped' (FPKM) or 'transcripts per million transcripts' (TPM).  The TPM metric is generally preferred to FPKM, given the property that all values will always sum up to 1 million (FPKM values will tend to not sum up to the same value across samples). For info on TPM vs. FPKM, see [Wagner et al. 2012. Theory Biosci](http://lynchlab.uchicago.edu/publications/Wagner,%20Kin,%20and%20Lynch%20(2012).pdf), and [Li and Dewey, BMC Bioinf. 2011](http://www.biomedcentral.com/1471-2105/12/323).
