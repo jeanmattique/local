@@ -241,5 +241,35 @@ and, looking at the output for gene counts as a function of minimum TPM value we
 
 The above table indicates that we have 847,297 'genes' that are expressed by at least 1 TPM in any one of the many samples in this expression matrix.  No, there are probably not so many of what we would call biologically relevant 'genes' in this data set, but instead, due to the sensitivity of RNA-Seq and our de novo transcriptome assembly, we were able to reconstruct contigs that represent that many features with evidence of being expressed at that minimum threshold.  If we increase our stringency to a minimum of 5 TPM, we report only 58,324 'genes', which many would consider a more reasonable estimate - even if still a probable exaggeration.  
 
-Plotting the number of 'genes' (or 'transcripts') as a function of minimum TPM threshold, we can see that the vast majority of all expressed features have very little expression support.  Using R (or your own favorite data analysis package), we might extrapolate the number of expressed 'genes' based on 
+Plotting the number of 'genes' (or 'transcripts') as a function of minimum TPM threshold, we can see that the vast majority of all expressed features have very little expression support.  Using R (or your own favorite data analysis package), we might extrapolate the number of expressed 'genes' based on the trend prior to the massive influx of lowly expressed transcripts:
+
+     % R
+     > data = read.table("genes_matrix.TPM.not_cross_norm.counts_by_min_TPM", header=T)
+     > plot(data, xlim=c(-100,0), ylim=c(0,100000), t='b')
+
+
+
+     # extract the data between 10 TPM and 100 TPM
+     > filt_data = data[data[,1] > -100 & data[,1] < -10,] 
+     # perform a linear regression on this filtered subset of the data
+     > fit = lm(filt_data[,2] ~ filt_data[,1])
+     > print(fit)
+
+      Call:
+      lm(formula = filt_data[, 2] ~ filt_data[, 1])
+      
+      Coefficients:
+      (Intercept)  filt_data[, 1]  
+       21588.7           188.8  
+     
+     # add the linear regression line to the plot 
+     >abline(fit, col='green', lwd=3)
+
+
+
+
+
+
+The linear regression allows us to extrapolate (based on the Y-intercept) that we have ~22k 'genes', which is a far better guess than our count of 847k 'genes' having at least 1 TPM in any sample, and certainly better than the 1.4 million 'genes' that were assembled.
+
 
