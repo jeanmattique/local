@@ -10,7 +10,7 @@
 * [Assembly Quality Assessment](Transcriptome-Quality-Assessment)
     * [Counting Full-length Transcripts](Counting-Full-Length-Trinity-Transcripts)
     * [RNA-Seq Read Representation](RNA-Seq-Read-Representation-by-Trinity-Assembly)
-    * [Contig Nx and ExNy stats](Transcriptome Contig Nx and ExNy stats)
+    * [Contig Nx and ExNy stats](Transcriptome Contig Nx and ExN50 stats)
 * [Downstream Analyses](Post-Transcriptome-Assembly-Downstream-Analyses)
     * [Transcript Quantification](Trinity-Transcript-Quantification)
     * [Differential Expression](Trinity-Differential-Expression)
