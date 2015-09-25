@@ -17,3 +17,4 @@
     * [Coding Region Identification](Coding-Region-Identification-in-Trinity-Assemblies)
     * [Functional Annotation of Transcripts](Functional-Annotation-of-Transcripts)
 * [Trinity Tidbits](Trinity-Tidbits)
+* [Frequently Asked Questions (FAQ)](Trinity-FAQ)
