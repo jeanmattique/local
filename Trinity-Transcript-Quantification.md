@@ -104,7 +104,7 @@ Any of the abundance estimation methods will provide transcript-level estimates 
 The estimated fragment counts are generally needed by many differential expression analysis tools that use count-based statistical models, and the normalized expression values (FPKM or TPM) are used almost everywhere else, such as plotting in heatmaps.
 
 
-## Alignment-based methods
+## Alignment-based abundance estimation methods
 The alignment step generates the file 'bowtie.bam', which is then fed directly into either RSEM or eXpress.  Note, if parameter '--coordsort_bam ' is set, the process also generates a 'bowtie.csorted.bam' file, which is a coordinate-sorted bam file that can be used for visualization using IGV.
 
 ### RSEM output
@@ -136,7 +136,7 @@ The eXpress runner also generates two files:
 
 Each includes the estimated counts, FPKM, and TPM measures, in addition to a large number of other metrics - see the [eXpress documentation](http://bio.math.berkeley.edu/eXpress/manual.html) for details.
 
-## Alignment-free methods
+## Alignment-free abundance estimation methods
 
 ### kallisto
 
@@ -158,3 +158,44 @@ The format of the output is short and sweet, providing the key essential metrics
 |TRINITY_DN19_c0_g1_i1|   283|     61.0618| 10|      5299.91|
 
 
+## Build Transcript and Gene Expression Matrices
+
+Using the transcript and gene-level abundance estimates for each of your samples, construct a matrix of counts and a matrix of normalized expression values using the following script:
+
+    $TRINITY_HOME/util/abundance_estimates_to_matrix.pl 
+
+    ############################################################
+    #
+    # Usage:  $TRINITY_HOME/util/abundance_estimates_to_matrix.pl --est_method <method>  sample1.results sample2.results ...
+    # Required:
+    #
+    #  --est_method <string>           RSEM|eXpress|kallisto  (needs to know what format to expect)
+    #
+    # Options:
+    #
+    #  --cross_sample_norm <string>         TMM|UpperQuartile|none   (default: TMM)
+    #
+    #  --name_sample_by_basedir             name sample column by dirname instead of filename
+    #      --basedir_index <int>            default(-2)
+    #
+    #  --out_prefix <string>                default: 'matrix'
+    #
+    ############################################################
+
+
+
+For example, suppose you have two samples (sampleA and sampleB), and you ran kallisto to estimate transcript abundances, you might generate matrices like so:
+
+    $TRINITY_HOME/util/abundance_estimates_to_matrix.pl --est_method kallisto \
+        --out_prefix trans_counts \
+        --name_sample_by_basedir \
+         sampleA/abundance.tsv \
+         sampleB/abundance.tsv 
+
+which would generate the following three files:
+
+      trans_counts.counts.matrix  : the estimated RNA-Seq fragment counts (raw counts)
+      trans_counts.TPM.not_cross_norm  : a matrix of TPM expression values (not cross-sample normalized)
+      trans_counts.TMM.EXPR.matrix : a matrix of TMM-normalized expression values
+
+The 'counts.matrix' file is used for downstream analyses of differential expression.  The TMM.EXPR.matrix file is used as the gene expression matrix in most other analyses.  For information on the importance of TMM (or cross-sample normalization in general), see [Robinson & Oshlack, Genome Biology 2010](http://www.genomebiology.com/2010/11/3/R25) and [Dillies et al., Brief Bioinf, 2012](http://bib.oxfordjournals.org/content/14/6/671.long).
