@@ -32,5 +32,5 @@ To get alignment statistics, run the following on the name-sorted bam file:
 
 
 
-
+A typical Trinity transcriptome assembly will have ~70-80% of the reads found mapped as proper pairs.
 
