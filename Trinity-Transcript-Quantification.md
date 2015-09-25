@@ -247,7 +247,7 @@ Plotting the number of 'genes' (or 'transcripts') as a function of minimum TPM t
      > data = read.table("genes_matrix.TPM.not_cross_norm.counts_by_min_TPM", header=T)
      > plot(data, xlim=c(-100,0), ylim=c(0,100000), t='b')
 
-
+<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/gene_count_vs_min_TPM.png" width=400 >
 
      # extract the data between 10 TPM and 100 TPM
      > filt_data = data[data[,1] > -100 & data[,1] < -10,] 
@@ -265,7 +265,7 @@ Plotting the number of 'genes' (or 'transcripts') as a function of minimum TPM t
      # add the linear regression line to the plot 
      >abline(fit, col='green', lwd=3)
 
-
+<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/extrapolate_gene_count.png" width=400 >
 
 
 
