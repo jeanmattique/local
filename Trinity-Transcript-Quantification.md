@@ -270,5 +270,7 @@ Plotting the number of 'genes' (or 'transcripts') as a function of minimum TPM t
 
 The linear regression allows us to extrapolate (based on the Y-intercept) that we have ~22k 'genes', which is a far better guess than our count of 847k 'genes' having at least 1 TPM in any sample, and certainly better than the 1.4 million 'genes' that were assembled.
 
-In summary, this is not a method to accurately estimate the true number of expressed genes, but rather to better understand the approximate number of genes that are best supported by the expression data, which is sometimes far fewer than the total number of 'transcripts' or 'genes' produced as part of the resulting assembly.
+In summary, this is not a method to accurately estimate the true number of expressed genes, but rather to better understand the approximate number of genes that are best supported by the expression data, which is sometimes far fewer than the total number of 'transcripts' or 'genes' produced as part of the resulting assembly.  
+
+Another approach for exploring this is to estimate the [E90 transcript count](Transcriptome-Contig-Nx-and-ExN50-stats).
 
