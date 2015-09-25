@@ -268,8 +268,7 @@ Plotting the number of 'genes' (or 'transcripts') as a function of minimum TPM t
 <img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/extrapolate_gene_count.png" width=400 >
 
 
-
-
 The linear regression allows us to extrapolate (based on the Y-intercept) that we have ~22k 'genes', which is a far better guess than our count of 847k 'genes' having at least 1 TPM in any sample, and certainly better than the 1.4 million 'genes' that were assembled.
+
 
 
