@@ -197,3 +197,45 @@ which would generate the following three files:
       trans_counts.TMM.EXPR.matrix : a matrix of TMM-normalized expression values
 
 The 'counts.matrix' file is used for downstream analyses of differential expression.  The TMM.EXPR.matrix file is used as the gene expression matrix in most other analyses.  For information on the importance of TMM (or cross-sample normalization in general), see [Robinson & Oshlack, Genome Biology 2010](http://www.genomebiology.com/2010/11/3/R25) and [Dillies et al., Brief Bioinf, 2012](http://bib.oxfordjournals.org/content/14/6/671.long).
+
+## Counting Numbers of Expressed Transcripts or Genes
+
+Presumably, a transcript is expressed if it has been assembled from RNA-Seq data, but as we know, transcription can be quite pervasive, and many transcripts, particularly the very lowly expressed ones, have questionable biological significance.  Note that some transcripts may have artificially low (or zero) expression values simply because they are incompletely assembled and do not recruit both pairs of PE reads in order to be properly accounted for during abundance estimation.  If we assume that most biologically relevant transcripts are reasonably well assembled and well quantified by the abundance estimation method used, we might infer the approximate number of expressed genes or transcripts as the number that are expressed above some minimum expression threshold.
+
+Given a matrix of TPM values (ideally, in this case, **not** the TMM normalized version), you can plot the number of genes (or transcripts) that are expressed above a minimum TPM expression threshold in any sample like so.
+
+
+    $TRINITY_HOME/util/misc/count_matrix_features_given_MIN_TPM_threshod.pl \
+              genes_matrix.TPM.not_cross_norm | tee genes_matrix.TPM.not_cross_norm.counts_by_min_TPM
+
+    and
+
+     $TRINITY_HOME/util/misc/count_matrix_features_given_MIN_TPM_threshod.pl \
+              trans_matrix.TPM.not_cross_norm | tee trans_matrix.TPM.not_cross_norm.counts_by_min_TPM
+
+
+and, looking at the output for gene counts as a function of minimum TPM value we see:
+
+|neg_min_tpm|     num_features|
+|-----------:|---------------:|
+|-177001| 1|
+|-167039| 2|
+|-163407| 3|
+|-162288| 4|
+|-115688| 5|
+|-106147| 6|
+|-94130|  7|
+|-77788|  8|
+|-75498|  9|
+|...|....|
+|-8|	35526|
+|-7|	39776|
+|-6|	46264|
+|-5|	58324|
+|-4|	84328|
+|-3|	147918|
+|-2|	311108|
+|-1|	847297|
+|0|	1388798|
+
+
