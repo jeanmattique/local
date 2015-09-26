@@ -72,12 +72,12 @@ Two outputs will be generated, one containing the enriched categories, and anoth
 |  GO:0016491|      2.85213785315928e-05|    0.999992430044754|       18|      384|     0.0438230981137924|      MF| oxidoreductase activity|
 |  GO:0009311|      6.17142027090978e-05|    0.999995031367248|       6|       36|      0.0812776049678818|      BP| oligosaccharide metabolic process|
 |  GO:0006979|      7.43934748203219e-05|    0.999990139968793|       8|       86|      0.0829156739562135|      BP| response to oxidative stress|
-  GO:0033554      8.56780402612919e-05    0.999971893243069       22      725     0.0829156739562135      BP cellular response to stress
-  GO:0051716      8.9939986935908e-05     0.999966321461546       29      1062    0.0829156739562135      BP cellular response to stimulus
-  GO:0009628      0.000216085667513453    0.999952957354358       11      178     0.176369334253296       BP response to abiotic stimulus
-  GO:0004601      0.000248703909891837    0.999994839511817       3       8       0.176369334253296       MF peroxidase activity
-  GO:0016684      0.000248703909891837    0.999994839511817       3       8       0.176369334253296       MF oxidoreductase activity, acting on peroxide as acceptor
-  GO:0070887      0.00026865285434211     0.999935263149842       12      216     0.176907904584279       BP cellular response to chemical stimulus
+|  GO:0033554|      8.56780402612919e-05|    0.999971893243069|       22|      725|     0.0829156739562135|      BP| cellular response to stress|
+|  GO:0051716|      8.9939986935908e-05|     0.999966321461546|       29|      1062|    0.0829156739562135|      BP| cellular response to stimulus|
+|  GO:0009628|      0.000216085667513453|    0.999952957354358|       11|      178|     0.176369334253296|       BP| response to abiotic stimulus|
+|  GO:0004601|      0.000248703909891837|    0.999994839511817|       3|       8|       0.176369334253296|       MF| peroxidase activity|
+|  GO:0016684|      0.000248703909891837|    0.999994839511817|       3|       8|       0.176369334253296|       MF| oxidoreductase activity, acting on peroxide as acceptor|
+|  GO:0070887|      0.00026865285434211|     0.999935263149842|       12|      216|     0.176907904584279|       BP| cellular response to chemical stimulus|
 
 
 == Example Data ==
