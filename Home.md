@@ -72,6 +72,10 @@ A full list of references including Trinity, RSEM, and additional tools leverage
 
 ## Funding for Trinity Development
 
-<iframe title="YouTube video player" class="youtube-player" type="text/html" 
-width="420" height="315" src="http://www.youtube.com/embed/9ky5NwV45qY" style="padding-left:100px; padding-bottom:30px"
-frameborder="0" allowFullScreen></iframe>
+Trinity development is funded by [ITCR](http://itcr.nci.nih.gov/).
+
+Our efforts related to building a Trinity Cancer Transcriptome Analysis Toolkit are described in this Youtube screencast:
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=9ky5NwV45qY" target="_blank">
+<img src="http://img.youtube.com/vi/9ky5NwV45qY/0.jpg" 
+alt="Trinity CTAT on Youtube" width="240" height="180" border="10" /></a>
