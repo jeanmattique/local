@@ -32,6 +32,7 @@ To test your installation of Trinity, try assembling the small sample data set p
     
     ./runMe.sh
 
+<a name="grid_conf"></a>
 ## [OPTIONAL] Adapting Trinity to a computing grid for parallel processing of naively parallel steps
 
 Trinity has many parallel-components, all of which can benefit from having multiple CPUs on a single server, but there are also cases such as in Chrysalis and Butterfly where tens of thousands to hundreds of thousands of commands can be executed in parallel, each having independent inputs and outputs.  These naively-parallel commands can be most efficiently computed in the context of a compute farm, submitting each of the commands (or batches of them) to individual nodes on the computing grid.  
