@@ -1,7 +1,5 @@
 = Trinity: Frequently Asked Questions =
 
-link:index.html[Trinity-home]
-
 - <<ques_why_so_many_transcripts, There are too many transcripts! What do I do?>>
 - <<ques_comp_resources_required, What computing resources are required?>>
 - <<ques_how_long, How long should this take?>>
