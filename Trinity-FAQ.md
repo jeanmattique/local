@@ -38,15 +38,14 @@ Ideally, you will have access to a large-memory server, roughly having ~1G of RA
 <a name="ques_how_long"></a>
 ##How long should this take?
 
-Trinity run-time depends on a number of factors including the number of reads to be assembled and the complexity of the transcript graphs.  The assembly from start to finish can take anywhere from ~1/2 hour to 1 hour per million reads (your mileage may vary).
+Trinity run-time depends on a number of factors including the number of reads to be assembled and the complexity of the transcript graphs.  The assembly from start to finish can take anywhere from ~1/2 hour to 1 hour per million reads (your mileage may vary).  If you have a large data set, be sure to use the --normalize_reads parameter to greatly improve run times.
 
 
 
 <a name="ques_sra_fq_conversion"></a>
 ##How do I use reads I downloaded from SRA?
 
-RNA-Seq data downloaded from SRA tends to exist in a .sra file that needs to be converted to fastq file format.  This can be done using the http://www.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?cmd=show&f=software&m=software&s=software[SRA Toolkit] like so:
-
+RNA-Seq data downloaded from SRA tends to exist in a .sra file that needs to be converted to fastq file format.  This can be done using the [SRA Toolkit](http://www.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?cmd=show&f=software&m=software&s=software) like so:
 
       SRA_TOOLKIT/fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files file.sra
 
