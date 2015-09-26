@@ -134,11 +134,15 @@ A typical Trinity command for assembling non-strand-specific RNA-seq data would 
 
 Run Trinity like so:
 
-     Trinity --seqType fq --max_memory 50G --left reads_1.fq.gz  --right reads_2.fq.gz --CPU 6
+     Trinity --seqType fq --max_memory 50G \
+             --left reads_1.fq.gz  --right reads_2.fq.gz --CPU 6
 
 If you have multiple sets of fastq files, such as corresponding to multiple tissue types or conditions, etc., you can indicate them to Trinity like so:
 
-     Trinity --seqType fq --max_memory 50G  --left condA_1.fq.gz,condB_1.fq.gz,condC_1.fq.gz --right condA_2.fq.gz,condB_2.fq.gz,condC_2.fq.gz --CPU 6  
+     Trinity --seqType fq --max_memory 50G  \
+             --left condA_1.fq.gz,condB_1.fq.gz,condC_1.fq.gz \
+             --right condA_2.fq.gz,condB_2.fq.gz,condC_2.fq.gz \
+             --CPU 6  
 
 Also note that fastq files can be gzip-compressed as shown above, in which case they should require a '.gz' extension.
 
