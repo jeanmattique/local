@@ -13,7 +13,7 @@
 - <<ques_combine_SS_w_DS_reads, Can I combine strand-specific and non-strand-specific reads?>>
 
 
-[[ques_why_so_many_transcripts]]
+<a name="ques_why_so_many_transcripts"></a>
 == There are too many transcripts!  What do I do? ==
 
 Welcome to RNA-Seq de novo assembly!  :)  There are several aspects of de novo assembled transcripts to be aware of:
