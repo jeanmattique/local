@@ -17,6 +17,10 @@ The Trinity toolkit includes a script 'PtR' (pronounced Peter, and stands for Pe
 and the replicate names should match identically to the column headers of your 'TMM.EXPR.matrix' and 'counts.matrix' files.
 
 
+>Below we demonstrate the use of PtR on data derived from RNA-Seq generated in this paper: [“Defining the transcriptomic landscape of Candida glabrata by RNA-Seq”.  Linde et al. Nucleic Acids Res. 2015 ]
+(http://www.ncbi.nlm.nih.gov/pubmed/?term=25586221), with an example counts matrix provided in the Trinity toolkit at $TRINITY_HOME/sample_data/test_DE_analysis
+
+
 ## Compare replicates for each of your samples
 
 Run PtR like so to compare the biological replicates for each of your samples.
