@@ -12,18 +12,20 @@ Use http://trinotate.sf.net[Trinotate] to generate an annotation report 'trinota
 
 Extract all GO assignments for each gene feature, including all parent terms within the GO DAG, using a script included in **Trinotate** (not Trinity) like so:
 
-  ${TRINOTATE_HOME}/util/extract_GO_assignments_from_Trinotate_xls.pl --Trinotate_xls trinotate.xls \
-                                                                      -G --include_ancestral_terms \
-                                                                    > go_annotations.txt
+      ${TRINOTATE_HOME}/util/extract_GO_assignments_from_Trinotate_xls.pl \
+                             --Trinotate_xls trinotate.xls \
+                             -G --include_ancestral_terms \
+                             > go_annotations.txt
 
 
 ## Run GOseq
 
 The Bioconductor package [GOseq](http://www.bioconductor.org/packages/release/bioc/html/goseq.html) can then be used to perform functional enrichment tests, like so:
 
-     ${TRINITY_HOME}/Analysis/DifferentialExpression/run_GOseq.pl --factor_labeling  factor_labeling.txt \
-                                                                  --GO_assignments go_annotations.txt \
-                                                                  --lengths gene.lengths.txt
+     ${TRINITY_HOME}/Analysis/DifferentialExpression/run_GOseq.pl \
+                           --factor_labeling  factor_labeling.txt \
+                           --GO_assignments go_annotations.txt \
+                           --lengths gene.lengths.txt
 
 Note, the above script is here in the **Trinity** software package (not Trinotate). Yes, it can be confusing going between the two.
 
