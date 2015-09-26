@@ -1,4 +1,4 @@
-= Trinity: Frequently Asked Questions =
+#Trinity: Frequently Asked Questions
 
 - [There are too many transcripts! What do I do?](#ques_why_so_many_transcripts)
 - [What computing resources are required?](#ques_comp_resources_required)
@@ -52,7 +52,7 @@ RNA-Seq data downloaded from SRA tends to exist in a .sra file that needs to be 
 <a name="ques_computing_grid"></a>
 ##How can I run this in parallel on a computing grid?
 
-The initial Inchworm and Chrysalis steps currently need to be run on a single server, however parts of Chrysalis and all of Butterfly can be run as naive parallel processes on a computing grid. Both SGE and LSF are currently supported. Configuring Trinity for leveraging these grid-computing platforms is described link:index.html#Computing_Grid[here].
+The initial Inchworm and Chrysalis steps currently need to be run on a single server, however parts of Chrysalis and all of Butterfly can be run as naive parallel processes on a computing grid. Both SGE and LSF are currently supported. Configuring Trinity for leveraging these grid-computing platforms is described [here](Installing-Trinity#grid_conf.
 
 
 <a name="ques_reads_in_assembly"></a>
