@@ -4,7 +4,9 @@ One metric for evaluating the quality of a transcriptome assembly is to examine 
 
 Trinity supports these analyses using [BLAST+](ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/).  
 
-Useful protein databases to search include [SwissProt](ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.fasta.gz) (<ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.fasta.gz>) and [TrEMBL](ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_trembl.fasta.gz) (<ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_trembl.fasta.gz>).
+Useful protein databases to search include:
+* [SwissProt](ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.fasta.gz) (<ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.fasta.gz>)
+* [TrEMBL](ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_trembl.fasta.gz) (<ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_trembl.fasta.gz>).
 
 To examine the extent of top-matching BLAST alignments, first run BLAST, and then run the included analysis script below:
 
@@ -24,7 +26,7 @@ To examine the extent of top-matching BLAST alignments, first run BLAST, and the
 
 Next, examine the percent of the target being aligned to by the best matching Trinity transcript, like so:
 
-   % $TRINITY_HOME/util/analyze_blastPlus_topHit_coverage.pl blastx.outfmt6 Trinity.fasta uniprot_sprot.fasta
+     % $TRINITY_HOME/util/analyze_blastPlus_topHit_coverage.pl blastx.outfmt6 Trinity.fasta uniprot_sprot.fasta
 
 This will create a file called 'blastx.outfmt6.txt.w_pct_hit_length' that adds fields to the blastx output file, including the top hit's length, percent of the hit's length included in the alignment to the Trinity transcript, and the header description for that database entry.  
 
