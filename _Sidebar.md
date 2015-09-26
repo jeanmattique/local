@@ -7,7 +7,7 @@
     * [Genome Annotation](Genome-Annotation-Using-Trinity--and-PASA)
 * [Monitoring Progress of a Trinity Run](Trinity-Progress-Monitoring)
 * [Output of Trinity Assembly](Output-of-Trinity-Assembly)
-* [Assembly Quality Assessment](Transcriptome-Quality-Assessment)
+* [Assembly Quality Assessment](Transcriptome-Assembly-Quality-Assessment)
     * [Counting Full-length Transcripts](Counting-Full-Length-Trinity-Transcripts)
     * [RNA-Seq Read Representation](RNA-Seq-Read-Representation-by-Trinity-Assembly)
     * [Contig Nx and ExN50 stats](Transcriptome Contig Nx and ExN50 stats)
