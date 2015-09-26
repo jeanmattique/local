@@ -13,6 +13,7 @@
     * [Contig Nx and ExN50 stats](Transcriptome Contig Nx and ExN50 stats)
 * [Downstream Analyses](Post-Transcriptome-Assembly-Downstream-Analyses)
     * [Transcript Quantification](Trinity-Transcript-Quantification)
+    * [QC Samples and Replicates](QC-Samples-and-Replicates)
     * [Differential Expression](Trinity-Differential-Expression)
     * [Coding Region Identification](Coding-Region-Identification-in-Trinity-Assemblies)
     * [Functional Annotation of Transcripts](Functional-Annotation-of-Transcripts)
