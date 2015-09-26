@@ -28,14 +28,18 @@ Run PtR like so to compare the biological replicates for each of your samples.
 
 Here, PtR reads in the matrix of counts, performs a counts-per-million (CPM) data transformation followed by a log2 transform, and then generates a multi-page pdf file (named ${sample}.rep_compare.pdf) for each of your samples, including several useful plots:
 
-A plot showing the sum of mapped fragments
-<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/sum_of_frags.png" width=400 />
+A plot showing the sum of mapped fragments:
 
-Pairwise comparisons of replicate log(CPM) values. Data points more than 2-fold different are highlighted in red.
+<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/sum_of_mapped_fragments.png" width=400 />
+
+Pairwise comparisons of replicate log(CPM) values. Data points more than 2-fold different are highlighted in red:
+
 <img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/replicate_pair_scatter_plot.png" width=400 /> 
 
 Pairwise MA plots (x-axis: mean log(CPM), y-axis log(fold_change)):
+
 <img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/replicate_pair_MA_plot.png" width=400 /> 
 
 and a replicate Pearson correlation heatmap:
-<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/replicate_pair_correlations" width=400 /> 
+
+<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/replicate_pair_correlations.png" width=400 /> 
