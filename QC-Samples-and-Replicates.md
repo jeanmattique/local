@@ -71,4 +71,4 @@ This generates a file 'counts.matrix.minCol10.minRow10.log2.principal_components
 
 The --prin_comp 3 indicates that the first three principal components will be plotted, as shown above, with PC1 vs. PC2 and PC2 vs. PC3.    In this example, the replicates cluster tightly according to sample type, which is very reassuring.
 
-If you have replicates that are clear outliers, you might consider removing them from your study as potential confounders.
+If you have replicates that are clear outliers, you might consider removing them from your study as potential confounders.  If it's clear that you have a [batch effect](http://www.nature.com/nrg/journal/v11/n10/full/nrg2825.html), you'll want to eliminate the batch effect during your downstream analysis of differential expression.
