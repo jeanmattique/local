@@ -80,7 +80,7 @@ Two outputs will be generated, one containing the enriched categories, and anoth
 |  GO:0070887|      0.00026865285434211|     0.999935263149842|       12|      216|     0.176907904584279|       BP| cellular response to chemical stimulus|
 
 
-== Example Data ==
+## Example Data
 
 See 'TRINITY_HOME/sample_data/test_GOSeq_trinotate_pipe/Spombe/'
 which includes sample input data and a 'runMe.sh' script for execution.
