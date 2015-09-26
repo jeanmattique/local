@@ -68,3 +68,10 @@ Performance tuning of Trinity is described in:
 - Henschel R, Lieber M, Wu L, Nista, PM, Haas BJ, LeDuc R.  Trinity RNA-Seq assembler performance optimization. XSEDE 2012 Proceedings of the 1st Conference of the Extreme Science and Engineering Discovery Environment: Bridging from the eXtreme to the campus and beyond. [ISBN: 978-1-4503-1602-6 doi>10.1145/2335755.2335842](http://dx.doi.org/10.1145/2335755.2335842).
 
 A full list of references including Trinity, RSEM, and additional tools leveraged by Trinity can be obtained by running 'Trinity --cite'.
+
+
+## Funding for Trinity Development
+
+<iframe title="YouTube video player" class="youtube-player" type="text/html" 
+width="420" height="315" src="http://www.youtube.com/embed/9ky5NwV45qY" style="padding-left:100px; padding-bottom:30px"
+frameborder="0" allowFullScreen></iframe>
