@@ -33,7 +33,7 @@ Welcome to RNA-Seq de novo assembly!  :)  There are several aspects of de novo a
 <a name="ques_comp_resources_required"></a>
 ##What computing resources are required?
 
-Ideally, you will have access to a large-memory server, roughly having ~1G of RAM per 1M reads to be assembled.  The memory usage mostly depends on the complexity of the RNA-Seq data set, specifically on the number of unique k-mers.  If you do not have access to a high-memory server, link:index.html#RunElsewhere[other freely available options are available].
+Ideally, you will have access to a large-memory server, roughly having ~1G of RAM per 1M reads to be assembled.  The memory usage mostly depends on the complexity of the RNA-Seq data set, specifically on the number of unique k-mers.  If you do not have access to a high-memory server, [other freely available options are available](Accessing-Trinity-on-Publicly-Available-Compute-Resources).
 
 <a name="ques_how_long"></a>
 ##How long should this take?
@@ -58,7 +58,7 @@ The initial Inchworm and Chrysalis steps currently need to be run on a single se
 <a name="ques_reads_in_assembly"></a>
 ##How do I identify the specific reads that were incorporated into the transcript assemblies?
 
-Currently, the mappings of reads to transcripts are not reported.  To obtain this information, we recommend realigning the reads to the assembled transcripts using http://bowtie-bio.sourceforge.net/index.shtml[Bowtie]. Capturing both properly paired read alignments and single unpaired alignments can be captured and quantified as described link:analysis/abundance_estimation.html#detailed_assessment[here].
+Currently, the mappings of reads to transcripts are not reported.  To obtain this information, we recommend realigning the reads to the assembled transcripts using http://bowtie-bio.sourceforge.net/index.shtml[Bowtie]. Capturing both properly paired read alignments and single unpaired alignments can be captured and quantified as described [here](RNA-Seq-Read-Representation-by-Trinity-Assembly)
 
 
 <a name="ques_mult_seq_libraries"></a>
@@ -76,7 +76,7 @@ There is no good way to combine strand-specific data with non-strand-specific da
 
 This is an indicator that the process ran out of available RAM. If you have more RAM resources to make available to Trinity, then simply rerun your original Trinity command with the altered resources allocated and it should resume approximately where it left off.  
 
-If you are resource limited, please consider running Trinity link:index.html#RunElsewhere[here].  If you want to continue to try to run Trinity given your available resources, you can reduce the total RAM requirements by running Trinity with parameter '--min_kmer_cov 2'. Although the assembly should still be of high quality and require less RAM, lowly expressed transcripts may be more highly fragmented in the assembly.
+If you are resource limited, please consider running Trinity [here](Accessing-Trinity-on-Publicly-Available-Compute-Resources).  If you want to continue to try to run Trinity given your available resources, you can reduce the total RAM requirements by running Trinity with parameter '--min_kmer_cov 2'. Although the assembly should still be of high quality and require less RAM, lowly expressed transcripts may be more highly fragmented in the assembly.
 
 
 <a name="ques_butterfly_GC_thread_fail"></a>
