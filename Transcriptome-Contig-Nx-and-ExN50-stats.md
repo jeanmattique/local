@@ -57,9 +57,10 @@ You can see that the Nx values based on the single longest isoform per gene are 
 
 ## Contig ExN50 Statistic
 
-An alternative to the Contig Nx statistic that could be considered more appropriate for transcriptome assembly data is the ExN50 statistic.  Here, the N50 statistic is computed as above but limited to the top most highly expressed transcripts that represent x% of the total normalized expression data.   This can be computed like so:
+An alternative to the Contig Nx statistic that could be considered more appropriate for transcriptome assembly data is the ExN50 statistic.  Here, the N50 statistic is computed as above but limited to the top most highly expressed transcripts that represent x% of the total normalized expression data.   This requires that you've first performed [transcript abundance estimation](Trinity-Transcript-Quantification), and can then be computed like so:
 
-     %  $TRINITY_HOME/util/misc/contig_E_statistic.pl transcripts.TMM.EXPR.matrix Trinity.fasta | tee ExN50.stats
+     %  $TRINITY_HOME/util/misc/contig_E_statistic.pl \
+         transcripts.TMM.EXPR.matrix Trinity.fasta | tee ExN50.stats
 
 which will generate a data table like so:
 
