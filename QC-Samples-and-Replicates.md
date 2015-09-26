@@ -64,3 +64,7 @@ Another important analysis method to explore relationships among the sample repl
 This generates a file 'counts.matrix.minCol10.minRow10.log2.principal_components.pdf'.
 
 <img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/PCA.png" width=400 /> 
+
+The --prin_comp 3 indicates that the first three principal components will be plotted, as shown above, with PC1 vs. PC2 and PC2 vs. PC3.    In this example, the replicates cluster tightly according to sample type, which is very reassuring.
+
+If you have replicates that are clear outliers, you might consider removing them from your study as potential confounders.
