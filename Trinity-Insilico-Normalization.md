@@ -92,6 +92,6 @@ You can run the normalization process on the sample data provided like so:
 
 ##References
 
-The algorithm used for in silico read normalization is described in the http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3875132/bin/NIHMS537313-supplement-supplementary_text.pdf[supplement] to our http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3875132/[Nature Protocol paper (Nat Protoc. Aug 2013; 8(8): 10.1038/nprot.2013.084)].
+The algorithm used for in silico read normalization is described in the http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3875132/bin/NIHMS537313-supplement-supplementary_text.pdf [supplement] to our http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3875132/ [Nature Protocol paper (Nat Protoc. Aug 2013; 8(8): 10.1038/nprot.2013.084)].
 
-Our method is based on that earlier described by C. Titus Brown and implemented in http://ged.msu.edu/papers/2012-diginorm/[diginorm].  Titus has a thoughtful [blog post](http://ivory.idyll.org/blog/trinity-in-silico-normalize.html) contrasting our approaches.
+Our method is based on that earlier described by C. Titus Brown and implemented in http://ged.msu.edu/papers/2012-diginorm/ [diginorm].  Titus has a thoughtful [blog post](http://ivory.idyll.org/blog/trinity-in-silico-normalize.html) contrasting our approaches.
