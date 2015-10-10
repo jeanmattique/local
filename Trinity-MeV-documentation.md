@@ -68,3 +68,14 @@ Before clustering the expression data, we might want to perform certain transfor
 If you're interested in clustering based on expression patterns (and discounting within-gene or within-transcript expression intensities), then you should mean-center the data.  This involves taking the mean expression value for each gene or transcript, and subtracting it from each expression value for that gene or transcript.  The mean value will then be zero, and your upregulated or downregulated samples will have positive or negative values, respectively.  Center-mean the data by using menu option: 'Adjust Data' -> 'Gene/Row Adjustments' -> 'Mean Center Genes/Rows' as shown below:
 
 <img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/mean_center_data.png"  />
+
+>For whatever reason (wish I knew!), the main view doesn't update with a new view of the data, but no worries. You'll see the results of our manipulations once we start generating other heatmaps below.
+
+Since we've centered the data, we'll want to update our color scale limits.  Do this via the menu option: 'Display' -> 'Set Color Scale Limits'
+
+<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/set_color_scale_limits_menu.png" />
+
+which will provide the dialog below.  Set the color scale range to have (-5, 0, 5) for the lower, mid, and upper limits, and then press the 'OK' button. 
+>you may choose different limits based on the range of values in your data, but the mean-centering should have the mid set at zero.
+
+<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/set_color_scale_limits_dialog.png" />
