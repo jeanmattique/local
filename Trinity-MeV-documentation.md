@@ -29,30 +29,30 @@ The matrix should now be ready for loading into MeV as described below.
 
 From the main MeV application menu, select 'File'->'Load Data':
 
-<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/load_data_menu.png" />
+<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/load_data_menu.png" width=400 />
 
 This will give you the file loading dialog:
 
-<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/load_data_dialog.png"  />
+<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/load_data_dialog.png" width=400  />
 
 Click the 'Browse' button and select your expression matrix file:
 
-<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/select_matrix_file.png"  />
+<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/select_matrix_file.png" width=400 />
 
 after selecting your data file, it should provide you with a quick view of your data like so:
 
-<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/click_first_data_cell.png"  />
+<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/click_first_data_cell.png" width=400 />
 
 Click the first expression data point in the upper-left corner of the data table. You'll see its boundaries highlighted indicating that it was selected.
 
 Click the 'Load' button, and this should present you with your initial data-loaded view in MeV:
 
-<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/initial_MeV_loaded_data_view.png"  />
+<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/initial_MeV_loaded_data_view.png" width=400 />
 
 
 The initial heatmap view might have the cells and/or the text labels smaller than you'd like. You can change this by visiting the menu option 'Display' -> 'Set Element Size' -> 'Custom'.  I tend to set this to width of 20, and height of 10.
 
-<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/change_heatmap_element_size.png"  />
+<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/change_heatmap_element_size.png" width=400 />
  
 
 ## Transform and Cluster the Expression Data
@@ -67,41 +67,41 @@ Before clustering the expression data, we might want to perform certain transfor
 
 If you're interested in clustering based on expression patterns (and discounting within-gene or within-transcript expression intensities), then you should mean-center the data.  This involves taking the mean expression value for each gene or transcript, and subtracting it from each expression value for that gene or transcript.  The mean value will then be zero, and your upregulated or downregulated samples will have positive or negative values, respectively.  Center-mean the data by using menu option: 'Adjust Data' -> 'Gene/Row Adjustments' -> 'Mean Center Genes/Rows' as shown below:
 
-<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/mean_center_data.png"  />
+<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/mean_center_data.png"  width=400 />
 
 >For whatever reason (wish I knew!), the main view doesn't update with a new view of the data, but no worries. You'll see the results of our manipulations once we start generating other heatmaps below.
 
 Since we've centered the data, we'll want to update our color scale limits.  Do this via the menu option: 'Display' -> 'Set Color Scale Limits'
 
-<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/set_color_scale_limits_menu.png" />
+<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/set_color_scale_limits_menu.png" width=400 />
 
 which will provide the dialog below.  Set the color scale range to have (-5, 0, 5) for the lower, mid, and upper limits, and then press the 'OK' button. 
 >you may choose different limits based on the range of values in your data, but the mean-centering should have the mid set at zero.
 
-<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/set_color_scale_limits_dialog.png" />
+<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/set_color_scale_limits_dialog.png" width=400 />
 
 
 ## Cluster your DE transcripts/genes:
 
 Click the 'Clustering' button at top followed by the 'Hierarchical Clustering' option as shown:
 
-<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/hierarchical_clustering_menu.png" />
+<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/hierarchical_clustering_menu.png" width=400 />
 
 You should see the dialog below.  Select 'Euclidean Distance' for the distance metric (or experiment with other options) and then click 'OK'.
 
-<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/hierarchical_clustering_dialog.png" />
+<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/hierarchical_clustering_dialog.png" width=400 />
 
 Clustering can usually happen very quickly. Once done, you'll see an "HCL" analysis show up in the analysis tracker on the left, as shown:
 
-<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/HCL_analysis_tab.png" />
+<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/HCL_analysis_tab.png" width=400 />
 
 Click on the 'HCL Tree' analysis node and you should see your newly clustered heat map:
 
-<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/HCL_heatmap.png" />
+<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/HCL_heatmap.png" width=400 />
 
 You can navigate the heatmap by scrolling up/down in the main viewer window.   You can select clusters in the heatmap simply by clicking on regions in the hierarchical tree:
 
-<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/heatmap_cluster_selected.png" />
+<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/heatmap_cluster_selected.png" width=400 />
 
 
 Now... explore MeV on your own. It's a tool with rich functionality.  Visit the [MeV website] (http://www.tm4.org/mev.html) for full documentation and any MeV-specific user support.
