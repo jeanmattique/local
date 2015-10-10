@@ -8,7 +8,12 @@ Next, follow the instructions below to upload your expression matrix into MeV.  
 
 ## Loading the expression matrix into MeV
 
+From the main MeV application menu, select 'File'->'Load Data':
+
 <img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/load_data_menu.png" />
 
+This will give you the file loading dialog:
+
+<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/load_data_dialog.png" />
 
 
