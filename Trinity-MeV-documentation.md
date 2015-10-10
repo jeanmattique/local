@@ -54,3 +54,17 @@ The initial heatmap view might have the cells and/or the text labels smaller tha
 
 <img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/change_heatmap_element_size.png"  />
  
+
+## Transform and Cluster the Expression Data
+
+### Log transformation (only if your data isn't already log transformed)
+
+Before clustering the expression data, we might want to perform certain transformations.  One common one is to log2-transform your expression data.  Since we already loaded in data that was previously log-transformed, we don't need to do this here. 
+
+>If you loaded in a data matrix that was not log-transformed, you can run the log2-transformation via menu option 'Adjust Data' -> 'Log Transformations' -> 'Log2 Transform'
+
+### Center the data
+
+If you're interested in clustering based on expression patterns (and discounting within-gene or within-transcript expression intensities), then you should mean-center the data.  This involves taking the mean expression value for each gene or transcript, and subtracting it from each expression value for that gene or transcript.  The mean value will then be zero, and your upregulated or downregulated samples will have positive or negative values, respectively.  Center-mean the data by using menu option: 'Adjust Data' -> 'Gene/Row Adjustments' -> 'Mean Center Genes/Rows' as shown below:
+
+<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/mean_center_data.png"  />
