@@ -79,3 +79,29 @@ which will provide the dialog below.  Set the color scale range to have (-5, 0, 
 >you may choose different limits based on the range of values in your data, but the mean-centering should have the mid set at zero.
 
 <img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/set_color_scale_limits_dialog.png" />
+
+
+## Cluster your DE transcripts/genes:
+
+Click the 'Clustering' button at top followed by the 'Hierarchical Clustering' option as shown:
+
+<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/hierarchical_clustering_menu.png" />
+
+You should see the dialog below.  Select 'Euclidean Distance' for the distance metric (or experiment with other options) and then click 'OK'.
+
+<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/hierarchical_clustering_dialog.png" />
+
+Clustering can usually happen very quickly. Once done, you'll see an "HCL" analysis show up in the analysis tracker on the left, as shown:
+
+<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/HCL_analysis_tab.png" />
+
+Click on the 'HCL Tree' analysis node and you should see your newly clustered heat map:
+
+<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/HCL_heatmap.png" />
+
+You can navigate the heatmap by scrolling up/down in the main viewer window.   You can select clusters in the heatmap simply by clicking on regions in the hierarchical tree:
+
+<img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/MeV_guide/heatmap_cluster_selected.png" />
+
+
+Now... explore MeV on your own. It's a tool with rich functionality.  Visit the [MeV website] (http://www.tm4.org/mev.html) for full documentation and any MeV-specific user support.
