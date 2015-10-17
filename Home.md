@@ -28,13 +28,21 @@ Trinity, developed at the [Broad Institute](http://www.broadinstitute.org) and t
 
 - *Butterfly* then processes the individual graphs in parallel, tracing the paths that reads and pairs of reads take within the graph, ultimately reporting full-length transcripts for alternatively spliced isoforms, and teasing apart transcripts that corresponds to paralogous genes.
 
+## Trinity Publications
+
 Trinity was published in [Nature Biotechnology](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3571712/).  Our protocol for transcriptome assembly and downstream analysis is published in [Nature Protocols] (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3875132/), although we always have the most current instructional material available here at the Trinity website.
+
+## Trinity Software Downloads
 
 The Trinity software package can be downloaded [here on GitHub](https://github.com/trinityrnaseq/trinityrnaseq/releases). Legacy versions (pre-2015) are still available at [our Sourceforge Trinity software archive](http://sourceforge.net/projects/trinityrnaseq/files/PREV_CONTENTS/previous_releases/).
 
 [Runtime and transcript reconstruction performance stats](http://trinityrnaseq.github.io/performance/) are available for current and previous releases.
 
-[Screenast videos](http://www.broadinstitute.org/partnerships/education/broade/trinity-screencast) are available to introduce you to Trinity and its various components. Also, hands-on tutorials for Trinity and Tuxedo are available as part of our link:workshop/rnaseq_workshop.html[RNA-Seq Workshop].
+## Trinity Training Materials
+
+[Screenast videos](http://www.broadinstitute.org/partnerships/education/broade/trinity-screencast) are available to introduce you to Trinity and its various components. 
+
+Also, hands-on tutorials for Trinity and Tuxedo are available as part of our [RNA-Seq Analysis Workshop](https://github.com/trinityrnaseq/RNASeq_Trinity_Tuxedo_Workshop/wiki).
 
 <a name='contact_us'></a>
 ##Contact Us
